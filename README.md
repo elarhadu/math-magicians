@@ -102,7 +102,7 @@ You may also see any lint errors in the console.
 
 - GitHub: [@elarhadu](https://github.com/elarhadu/)
 - Twitter: [@elarh_](https://twitter.com/elarh_)
-- LinkedIn: [Emmanuella Adu](www.linkedin.com/in/emmanuella-adu/)
+- LinkedIn: [Emmanuella Adu](https://www.linkedin.com/in/emmanuella-adu/)
 
 <!-- FUTURE FEATURES -->
 
