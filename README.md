@@ -86,7 +86,7 @@ npx create-react-app .
 
 ### Open page in browser <a name="triangular_flag_on_post-deployment"></a>
 ```bash
-`npm start`
+npm start
 ```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
