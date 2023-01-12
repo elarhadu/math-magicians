@@ -1,45 +1,36 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
+import './calculator.stlye.css';
 
+const OPERATORS = [{ id: 1, text: 'AC' }, { id: 2, text: '+/-' }, { id: 3, text: '%' }, { id: 4, text: '÷' }];
+const NUM = [{ id: 5, text: '7' }, { id: 6, text: '8' }, { id: 7, text: '9' }, { id: 8, text: 'x' }];
+const MORENUM = [{ id: 9, text: '4' }, { id: 10, text: '5' }, { id: 11, text: '6' }, { id: 12, text: '-' }];
+const MORENUMS = [{ id: 13, text: '1' }, { id: 14, text: '2' }, { id: 15, text: '3' }, { id: 16, text: '+' }];
+const LASTNUMS = [{ id: 17, text: '0' }, { id: 18, text: '.' }, { id: 19, text: '=' }];
 export default class Calculator extends Component {
   render() {
     return (
-      <div className="Calculator">
-        <div className="result">
-          0
-        </div>
-        <div className="digits">
-          <button type="button">AC</button>
-          <button type="button">+/-</button>
-          <button type="button">%</button>
-          <button type="button" className="operator">÷</button>
-        </div>
-
-        <div className="digits">
-          <button type="button">7</button>
-          <button type="button">8</button>
-          <button type="button">9</button>
-          <button type="button" className="operator">x</button>
-        </div>
-
-        <div className="digits">
-          <button type="button">4</button>
-          <button type="button">5</button>
-          <button type="button">6</button>
-          <button type="button" className="operator">-</button>
-        </div>
-
-        <div className="digits">
-          <button type="button">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button type="button" className="operator">+</button>
-        </div>
-
-        <div className="bottom-digits">
-          <button type="button" className="button-0">0</button>
-          <button type="button" className="button-dot">.</button>
-          <button type="button" className="operator equal">=</button>
+      <div className="container">
+        <div className="calculator">
+          <div className="r-container">
+            <p className="result">0</p>
+          </div>
+          <div className="digits">
+            {OPERATORS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+          </div>
+          <div className="digits">
+            {NUM.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+          </div>
+          <div className="digits">
+            {MORENUM.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+          </div>
+          <div className="digits">
+            {MORENUMS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+          </div>
+          <div className="digits">
+            {LASTNUMS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+          </div>
         </div>
       </div>
     );

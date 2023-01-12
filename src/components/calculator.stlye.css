@@ -1,0 +1,45 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.r-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    background-color: #858792;
+    color: white;
+}
+
+.result{
+    margin: 0;
+    padding-right: 5px;
+}
+
+.digits{
+    display: flex;
+    width: 100%;
+}
+
+.btn{
+    border: 1px solid #D1D1D1;
+    cursor: pointer;
+    width: 60px;
+    height: 50px;
+   font-weight: 700;
+}
+
+.btn-4,
+.btn-8,
+.btn-12,
+.btn-16,
+.btn-19{
+    background: #F4903F;
+     
+}
+
+.btn-17{
+    width: 120px;
+}
