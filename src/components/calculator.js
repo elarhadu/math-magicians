@@ -7,6 +7,11 @@ const MORENUM = [{ id: 9, text: '4' }, { id: 10, text: '5' }, { id: 11, text: '6
 const MORENUMS = [{ id: 13, text: '1' }, { id: 14, text: '2' }, { id: 15, text: '3' }, { id: 16, text: '+' }];
 const LASTNUMS = [{ id: 17, text: '0' }, { id: 18, text: '.' }, { id: 19, text: '=' }];
 export default class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
       <div className="container">
