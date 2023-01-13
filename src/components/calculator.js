@@ -1,7 +1,5 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import './calculator.stlye.css';
+import './calculator.css';
 
 const OPERATORS = [{ id: 1, text: 'AC' }, { id: 2, text: '+/-' }, { id: 3, text: '%' }, { id: 4, text: '÷' }];
 const NUM = [{ id: 5, text: '7' }, { id: 6, text: '8' }, { id: 7, text: '9' }, { id: 8, text: 'x' }];
