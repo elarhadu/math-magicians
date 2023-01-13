@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import calculate from '../logic/calculate';
 import './calculator.css';
 
 const OPERATORS = [{ id: 1, text: 'AC' }, { id: 2, text: '+/-' }, { id: 3, text: '%' }, { id: 4, text: '÷' }];
@@ -9,30 +10,40 @@ const LASTNUMS = [{ id: 17, text: '0' }, { id: 18, text: '.' }, { id: 19, text: 
 export default class Calculator extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
   }
 
+  buttonClick = (event) => {
+    const result = calculate(this.state, event.target.textContent);
+    this.setState(result);
+  };
+
   render() {
+    const { total, next } = this.state;
     return (
       <div className="container">
         <div className="calculator">
           <div className="r-container">
-            <p className="result">0</p>
+            <p className="result">{next || total || 0}</p>
           </div>
           <div className="digits">
-            {OPERATORS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+            {OPERATORS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`} onClick={this.buttonClick}>{text}</button>)}
           </div>
           <div className="digits">
-            {NUM.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+            {NUM.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`} onClick={this.buttonClick}>{text}</button>)}
           </div>
           <div className="digits">
-            {MORENUM.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+            {MORENUM.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`} onClick={this.buttonClick}>{text}</button>)}
           </div>
           <div className="digits">
-            {MORENUMS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+            {MORENUMS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`} onClick={this.buttonClick}>{text}</button>)}
           </div>
           <div className="digits">
-            {LASTNUMS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`}>{text}</button>)}
+            {LASTNUMS.map(({ text, id }) => <button type="button" key={id} className={`btn-${id} btn`} onClick={this.buttonClick}>{text}</button>)}
           </div>
         </div>
       </div>
