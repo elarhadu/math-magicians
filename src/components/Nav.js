@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import './Nav.css';
 
 export default function Nav() {
@@ -18,17 +17,7 @@ export default function Nav() {
             <a href="/quote" className="nav-link">Quote</a>
           </li>
         </ul>
-        {/* <Link to="/" className="nav-link">
-      Home |
-    </Link>
-    <Link to="/calculator" className="nav-link">
-      Calculator |
-    </Link>
-    <Link to="/quote" className="nav-link">
-      Quote
-    </Link> */}
       </nav>
-
     </div>
   );
 }
