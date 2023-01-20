@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  background: #f4903f;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+ul li {
+  margin-left: 1.5em;
+}
+
+.nav-link {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-right: 1.5em;
+}
