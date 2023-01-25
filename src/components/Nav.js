@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 
 export default function Nav() {
@@ -8,13 +9,13 @@ export default function Nav() {
       <nav>
         <ul>
           <li>
-            <a href="/" className="nav-link">Home</a>
+            <Link to="/" className="nav-link">Home</Link>
           </li>
           <li>
-            <a href="/calculator" className="nav-link">Calculator</a>
+            <Link to="/calculator" className="nav-link">Calculator</Link>
           </li>
           <li>
-            <a href="/quote" className="nav-link">Quote</a>
+            <Link to="/quote" className="nav-link">Quote</Link>
           </li>
         </ul>
       </nav>
